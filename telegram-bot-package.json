@@ -1,0 +1,28 @@
+{
+  "name": "stylesync-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot для StyleSync Mini App",
+  "main": "telegram-bot.js",
+  "scripts": {
+    "start": "node telegram-bot.js",
+    "dev": "nodemon telegram-bot.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot", 
+    "mini-app",
+    "fashion",
+    "style"
+  ],
+  "author": "StyleSync Team",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
