@@ -6,7 +6,7 @@
 
 # Telegram Bot
 TELEGRAM_BOT_TOKEN=8202127745:AAE6CoOcbJx0vByCUthla6hP-wjJKbzMyB0
-TELEGRAM_MINI_APP_URL=https://ВАШ-ДОМЕН.timeweb.cloud
+TELEGRAM_MINI_APP_URL=https://bassixs-stylesync-50b5.twc1.net
 
 # Application Settings
 NODE_ENV=production
