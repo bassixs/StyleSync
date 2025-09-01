@@ -17,7 +17,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const BOT_TOKEN = '8202127745:AAE6CoOcbJx0vByCUthla6hP-wjJKbzMyB0';
 
 // URL StyleSync Mini App
-const MINI_APP_URL = 'http://localhost:5173';
+const MINI_APP_URL = process.env.TELEGRAM_MINI_APP_URL || 'http://localhost:5173';
 
 // Создание экземпляра бота
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
