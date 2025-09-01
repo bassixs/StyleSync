@@ -1,133 +1,189 @@
-23:05:01 | Preparing environment
-23:05:01 | Creating base layer
-23:05:01 | Using existing image static-advanced-node-12-ng22:latest
-23:05:01 | Building keys layer
-23:05:01 | DEBUG | 2025/09/01 23:05:01 in: []string{}
-23:05:01 | DEBUG | 2025/09/01 23:05:01 Parsed entitlements: []
-23:05:01 | DEBUG | #0 building with "default" instance using docker driver
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #1 [internal] load build definition from Dockerfile
-23:05:01 | DEBUG | #1 transferring dockerfile: 182B done
-23:05:01 | DEBUG | #1 DONE 0.0s
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #2 [internal] load metadata for docker.io/library/static-advanced-node-12-ng22:latest
-23:05:01 | DEBUG | #2 DONE 0.0s
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #3 [internal] load .dockerignore
-23:05:01 | DEBUG | #3 transferring context: 2B done
-23:05:01 | DEBUG | #3 DONE 0.0s
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #4 [1/4] FROM docker.io/library/static-advanced-node-12-ng22:latest
-23:05:01 | DEBUG | #4 DONE 0.0s
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #5 [2/4] WORKDIR /opt/build
-23:05:01 | DEBUG | #5 CACHED
-23:05:01 | DEBUG | 
-23:05:01 | DEBUG | #6 [3/4] RUN mkdir -p /root/.ssh
-23:05:01 | DEBUG | #6 DONE 0.4s
-23:05:02 | DEBUG | 
-23:05:02 | DEBUG | #7 [4/4] RUN ssh-keyscan -t rsa github.com > /root/.ssh/known_hosts
-23:05:05 | DEBUG | #7 3.679 # github.com:22 SSH-2.0-88f9acd9
-23:05:06 | DEBUG | #7 DONE 4.1s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #8 exporting to image
-23:05:06 | DEBUG | #8 exporting layers 0.0s done
-23:05:06 | DEBUG | #8 writing image sha256:43fd20abdbcd93635ade8623697fcfb528ea4720919606e78ad9340851704a39 done
-23:05:06 | DEBUG | #8 naming to docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys done
-23:05:06 | DEBUG | #8 DONE 0.1s
-23:05:06 | Layer final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys built successfully
-23:05:06 | Cloning code
-23:05:06 | Building code layer
-23:05:06 | DEBUG | 2025/09/01 23:05:06 in: []string{}
-23:05:06 | DEBUG | 2025/09/01 23:05:06 Parsed entitlements: []
-23:05:06 | DEBUG | #0 building with "default" instance using docker driver
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #1 [internal] load build definition from Dockerfile
-23:05:06 | DEBUG | #1 transferring dockerfile: 342B done
-23:05:06 | DEBUG | #1 DONE 0.0s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #2 [internal] load metadata for docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys:latest
-23:05:06 | DEBUG | #2 DONE 0.0s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #3 [internal] load .dockerignore
-23:05:06 | DEBUG | #3 transferring context: 2B done
-23:05:06 | DEBUG | #3 DONE 0.0s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #4 [1/6] FROM docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys:latest
-23:05:06 | DEBUG | #4 DONE 0.0s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #5 [2/6] WORKDIR /opt/build
-23:05:06 | DEBUG | #5 DONE 0.0s
-23:05:06 | DEBUG | 
-23:05:06 | DEBUG | #6 [3/6] RUN git clone "https://github.com/bassixs/StyleSync.git" -b main /opt/build
-23:05:06 | DEBUG | #6 0.260 Cloning into '/opt/build'...
-23:05:08 | DEBUG | #6 DONE 1.4s
-23:05:08 | DEBUG | 
-23:05:08 | DEBUG | #7 [4/6] RUN cd /opt/build
-23:05:08 | DEBUG | #7 DONE 0.3s
-23:05:08 | DEBUG | 
-23:05:08 | DEBUG | #8 [5/6] RUN git remote rm origin
-23:05:08 | DEBUG | #8 DONE 0.4s
-23:05:08 | DEBUG | 
-23:05:08 | DEBUG | #9 [6/6] RUN git checkout f5883bcb4ea5bb2f30b9372c332677a0a2f138ef
-23:05:12 | DEBUG | #9 3.493 Note: switching to 'f5883bcb4ea5bb2f30b9372c332677a0a2f138ef'.
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493 You are in 'detached HEAD' state. You can look around, make experimental
-23:05:12 | DEBUG | #9 3.493 changes and commit them, and you can discard any commits you make in this
-23:05:12 | DEBUG | #9 3.493 state without impacting any branches by switching back to a branch.
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493 If you want to create a new branch to retain commits you create, you may
-23:05:12 | DEBUG | #9 3.493 do so (now or later) by using -c with the switch command. Example:
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493   git switch -c <new-branch-name>
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493 Or undo this operation with:
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493   git switch -
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493 Turn off this advice by setting config variable advice.detachedHead to false
-23:05:12 | DEBUG | #9 3.493 
-23:05:12 | DEBUG | #9 3.493 HEAD is now at f5883bc docs: add environment variables configuration files
-23:05:12 | DEBUG | #9 DONE 3.6s
-23:05:12 | DEBUG | 
-23:05:12 | DEBUG | #10 exporting to image
-23:05:12 | DEBUG | #10 exporting layers 0.1s done
-23:05:12 | DEBUG | #10 writing image sha256:f0afbae8f803ccb417ebd9b91121ba3bb536173176a71d5647a992cfee201790 done
-23:05:12 | DEBUG | #10 naming to docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code done
-23:05:12 | DEBUG | #10 DONE 0.1s
-23:05:12 | Layer final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code built successfully
-23:05:12 | Switching to commit f5883bcb4ea5bb2f30b9372c332677a0a2f138ef
-23:05:12 | Checking if there any system dependencies
-23:05:14 | DEBUG | [".", "..", ".devv", ".git", ".gitignore", "BOT_SETUP.md", "DEPLOYMENT.md", "README.md", "TELEGRAM_LAUNCH.md", "components.json", "env-variables.txt", "env.local.txt", "env.production", "eslint.config.js", "get-ngrok-url.js", "index.html", "package-lock.json", "package.json", "postcss.config.js", "src", "tailwind.config.js", "telegram-bot-package.json", "telegram-bot.js", "test-production.js", "timeweb-env-setup.txt", "tsconfig.app.json", "tsconfig.json", "tsconfig.node.json", "vite.config.ts"]
-23:05:15 | Installing dependencies
-23:05:15 | Building dependencies layer
-23:05:15 | DEBUG | 2025/09/01 23:05:15 in: []string{}
-23:05:15 | DEBUG | 2025/09/01 23:05:15 Parsed entitlements: []
-23:05:15 | DEBUG | #0 building with "default" instance using docker driver
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #1 [internal] load build definition from Dockerfile
-23:05:15 | DEBUG | #1 transferring dockerfile: 152B done
-23:05:15 | DEBUG | #1 DONE 0.0s
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #2 [internal] load metadata for docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code:latest
-23:05:15 | DEBUG | #2 DONE 0.0s
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #3 [internal] load .dockerignore
-23:05:15 | DEBUG | #3 transferring context: 2B done
-23:05:15 | DEBUG | #3 DONE 0.0s
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #4 [1/3] FROM docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code:latest
-23:05:15 | DEBUG | #4 DONE 0.1s
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #5 [2/3] WORKDIR /opt/build
-23:05:15 | DEBUG | #5 DONE 0.1s
-23:05:15 | DEBUG | 
-23:05:15 | DEBUG | #6 [3/3] RUN cd /opt/build && npm i --verbose
-23:05:15 | DEBUG | #6 0.431 npm verbose cli /usr/bin/node /usr/bin/npm
-23:05:15 | DEBUG | #6 0.431 npm info using npm@10.9.3
-23:05:15 | DEBUG | #6 0.431 npm info using node@v22.19.0
-23:05:16 | DEBUG | #6 0.434 npm verbose title npm i
-23:05:16 | DEBUG | #6 0.434 npm verbose argv "i" "--loglevel" "verbose"
-23:05:16 | DEBUG | #6 0.435 npm verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-09-01T20_05_15_920Z-
-23:05:16 | DEBUG | #6 0.438 npm verbose logfile /root/.npm/_logs/2025-09-01T20_05_15_920Z-debug-0.log
-23:05:16 | DEBUG | #6 1.369 npm http fetch GET 200 https://registry.npmjs.org/picomatch 234ms (cache revalidated)
+23:11:17 | Preparing environment
+23:11:17 | Creating base layer
+23:11:19 | Using existing image static-advanced-node-12-ng22:latest
+23:11:19 | Building keys layer
+23:11:19 | DEBUG | 2025/09/01 23:11:19 in: []string{}
+23:11:19 | DEBUG | 2025/09/01 23:11:19 Parsed entitlements: []
+23:11:20 | DEBUG | #0 building with "default" instance using docker driver
+23:11:20 | DEBUG | 
+23:11:20 | DEBUG | #1 [internal] load build definition from Dockerfile
+23:11:20 | DEBUG | #1 transferring dockerfile:
+23:11:21 | DEBUG | #1 transferring dockerfile: 182B done
+23:11:21 | DEBUG | #1 DONE 1.0s
+23:11:21 | DEBUG | 
+23:11:21 | DEBUG | #2 [internal] load metadata for docker.io/library/static-advanced-node-12-ng22:latest
+23:11:21 | DEBUG | #2 DONE 0.0s
+23:11:21 | DEBUG | 
+23:11:21 | DEBUG | #3 [internal] load .dockerignore
+23:11:21 | DEBUG | #3 transferring context:
+23:11:21 | DEBUG | #3 transferring context: 2B done
+23:11:21 | DEBUG | #3 DONE 0.1s
+23:11:21 | DEBUG | 
+23:11:21 | DEBUG | #4 [1/4] FROM docker.io/library/static-advanced-node-12-ng22:latest
+23:11:21 | DEBUG | #4 CACHED
+23:11:21 | DEBUG | 
+23:11:21 | DEBUG | #5 [2/4] WORKDIR /opt/build
+23:11:22 | DEBUG | #5 DONE 1.8s
+23:11:23 | DEBUG | 
+23:11:23 | DEBUG | #6 [3/4] RUN mkdir -p /root/.ssh
+23:11:23 | DEBUG | #6 DONE 1.0s
+23:11:24 | DEBUG | 
+23:11:24 | DEBUG | #7 [4/4] RUN ssh-keyscan -t rsa github.com > /root/.ssh/known_hosts
+23:11:24 | DEBUG | #7 0.665 # github.com:22 SSH-2.0-88f9acd9
+23:11:25 | DEBUG | #7 DONE 1.6s
+23:11:25 | DEBUG | 
+23:11:25 | DEBUG | #8 exporting to image
+23:11:25 | DEBUG | #8 exporting layers 0.1s done
+23:11:25 | DEBUG | #8 writing image sha256:45149e6302a893ef650442ca5f7b9d3bb1514f6a6682d61486646528def71fde done
+23:11:25 | DEBUG | #8 naming to docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys done
+23:11:25 | DEBUG | #8 DONE 0.1s
+23:11:25 | Layer final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys built successfully
+23:11:25 | Cloning code
+23:11:25 | Building code layer
+23:11:25 | DEBUG | 2025/09/01 23:11:25 in: []string{}
+23:11:25 | DEBUG | 2025/09/01 23:11:25 Parsed entitlements: []
+23:11:26 | DEBUG | #0 building with "default" instance using docker driver
+23:11:26 | DEBUG | 
+23:11:26 | DEBUG | #1 [internal] load build definition from Dockerfile
+23:11:26 | DEBUG | #1 transferring dockerfile: 342B done
+23:11:26 | DEBUG | #1 DONE 0.0s
+23:11:26 | DEBUG | 
+23:11:26 | DEBUG | #2 [internal] load metadata for docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys:latest
+23:11:26 | DEBUG | #2 DONE 0.0s
+23:11:26 | DEBUG | 
+23:11:26 | DEBUG | #3 [internal] load .dockerignore
+23:11:26 | DEBUG | #3 transferring context: 2B done
+23:11:26 | DEBUG | #3 DONE 0.0s
+23:11:26 | DEBUG | 
+23:11:26 | DEBUG | #4 [1/6] FROM docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-keys:latest
+23:11:26 | DEBUG | #4 DONE 0.1s
+23:11:26 | DEBUG | 
+23:11:26 | DEBUG | #5 [2/6] WORKDIR /opt/build
+23:11:27 | DEBUG | #5 DONE 0.8s
+23:11:27 | DEBUG | 
+23:11:27 | DEBUG | #6 [3/6] RUN git clone "https://github.com/bassixs/StyleSync.git" -b main /opt/build
+23:11:27 | DEBUG | #6 0.333 Cloning into '/opt/build'...
+23:11:29 | DEBUG | #6 DONE 2.5s
+23:11:29 | DEBUG | 
+23:11:29 | DEBUG | #7 [4/6] RUN cd /opt/build
+23:11:30 | DEBUG | #7 DONE 0.7s
+23:11:30 | DEBUG | 
+23:11:30 | DEBUG | #8 [5/6] RUN git remote rm origin
+23:11:30 | DEBUG | #8 DONE 0.7s
+23:11:31 | DEBUG | 
+23:11:31 | DEBUG | #9 [6/6] RUN git checkout 719a1fcf38e54804f49fc05e4ea082f47cf8aac8
+23:11:31 | DEBUG | #9 0.370 Note: switching to '719a1fcf38e54804f49fc05e4ea082f47cf8aac8'.
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370 You are in 'detached HEAD' state. You can look around, make experimental
+23:11:31 | DEBUG | #9 0.370 changes and commit them, and you can discard any commits you make in this
+23:11:31 | DEBUG | #9 0.370 state without impacting any branches by switching back to a branch.
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370 If you want to create a new branch to retain commits you create, you may
+23:11:31 | DEBUG | #9 0.370 do so (now or later) by using -c with the switch command. Example:
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370   git switch -c <new-branch-name>
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370 Or undo this operation with:
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370   git switch -
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370 Turn off this advice by setting config variable advice.detachedHead to false
+23:11:31 | DEBUG | #9 0.370 
+23:11:31 | DEBUG | #9 0.370 HEAD is now at 719a1fc fix: resolve Node.js 22 compatibility issues
+23:11:31 | DEBUG | #9 DONE 0.8s
+23:11:31 | DEBUG | 
+23:11:31 | DEBUG | #10 exporting to image
+23:11:31 | DEBUG | #10 exporting layers 0.1s done
+23:11:31 | DEBUG | #10 writing image sha256:6066c08c77f6cfa30084834be5de16dc4501c48a7411a1ed98fd2865ab98755e done
+23:11:31 | DEBUG | #10 naming to docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code 0.0s done
+23:11:31 | DEBUG | #10 DONE 0.1s
+23:11:31 | Layer final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code built successfully
+23:11:31 | Switching to commit 719a1fcf38e54804f49fc05e4ea082f47cf8aac8
+23:11:31 | Checking if there any system dependencies
+23:11:33 | DEBUG | [".", "..", ".devv", ".git", ".gitignore", ".nvmrc", "BOT_SETUP.md", "DEPLOYMENT.md", "Dockerfile", "README.md", "TELEGRAM_LAUNCH.md", "components.json", "env-variables.txt", "env.local.txt", "env.production", "eslint.config.js", "get-ngrok-url.js", "index.html", "package-lock.json", "package.json", "postcss.config.js", "src", "tailwind.config.js", "telegram-bot-package.json", "telegram-bot.js", "test-production.js", "timeweb-env-setup.txt", "tsconfig.app.json", "tsconfig.json", "tsconfig.node.json", "vite.config.ts", "\u043b\u043e\u0433\u0438 \u043f\u043b\u043e\u0445\u0438\u0435.txt"]
+23:11:33 | Installing dependencies
+23:11:33 | Building dependencies layer
+23:11:33 | DEBUG | 2025/09/01 23:11:33 in: []string{}
+23:11:33 | DEBUG | 2025/09/01 23:11:33 Parsed entitlements: []
+23:11:34 | DEBUG | #0 building with "default" instance using docker driver
+23:11:34 | DEBUG | 
+23:11:34 | DEBUG | #1 [internal] load build definition from Dockerfile
+23:11:34 | DEBUG | #1 transferring dockerfile: 152B done
+23:11:34 | DEBUG | #1 DONE 0.1s
+23:11:34 | DEBUG | 
+23:11:34 | DEBUG | #2 [internal] load metadata for docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code:latest
+23:11:34 | DEBUG | #2 DONE 0.0s
+23:11:34 | DEBUG | 
+23:11:34 | DEBUG | #3 [internal] load .dockerignore
+23:11:34 | DEBUG | #3 transferring context: 2B done
+23:11:34 | DEBUG | #3 DONE 0.0s
+23:11:34 | DEBUG | 
+23:11:34 | DEBUG | #4 [1/3] FROM docker.io/library/final-image-8cd7b883-fb53-4657-ba89-6a7687a7c718-code:latest
+23:11:34 | DEBUG | #4 DONE 0.1s
+23:11:34 | DEBUG | 
+23:11:34 | DEBUG | #5 [2/3] WORKDIR /opt/build
+23:11:34 | DEBUG | #5 DONE 0.7s
+23:11:35 | DEBUG | 
+23:11:35 | DEBUG | #6 [3/3] RUN cd /opt/build && npm i --verbose
+23:11:35 | DEBUG | #6 0.462 npm verbose cli /usr/bin/node /usr/bin/npm
+23:11:35 | DEBUG | #6 0.462 npm info using npm@10.9.3
+23:11:35 | DEBUG | #6 0.462 npm info using node@v22.19.0
+23:11:35 | DEBUG | #6 0.465 npm verbose title npm i
+23:11:35 | DEBUG | #6 0.465 npm verbose argv "i" "--loglevel" "verbose"
+23:11:35 | DEBUG | #6 0.465 npm verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-09-01T20_11_35_382Z-
+23:11:35 | DEBUG | #6 0.467 npm verbose logfile /root/.npm/_logs/2025-09-01T20_11_35_382Z-debug-0.log
+23:11:37 | DEBUG | #6 2.367 npm http fetch GET 200 https://registry.npmjs.org/vite 1305ms (cache miss)
+23:11:37 | DEBUG | #6 2.989 npm http fetch GET 200 https://registry.npmjs.org/@types%2fnode 128ms (cache revalidated)
+23:11:38 | DEBUG | #6 3.236 npm http fetch GET 200 https://registry.npmjs.org/less 62ms (cache miss)
+23:11:38 | DEBUG | #6 3.331 npm http fetch GET 200 https://registry.npmjs.org/lightningcss 89ms (cache miss)
+23:11:38 | DEBUG | #6 3.403 npm http fetch GET 200 https://registry.npmjs.org/sass 69ms (cache miss)
+23:11:38 | DEBUG | #6 3.505 npm http fetch GET 200 https://registry.npmjs.org/sass-embedded 94ms (cache miss)
+23:11:38 | DEBUG | #6 3.572 npm http fetch GET 200 https://registry.npmjs.org/stylus 60ms (cache miss)
+23:11:38 | DEBUG | #6 3.643 npm http fetch GET 200 https://registry.npmjs.org/sugarss 68ms (cache miss)
+23:11:38 | DEBUG | #6 3.729 npm http fetch GET 200 https://registry.npmjs.org/postcss 84ms (cache miss)
+23:11:38 | DEBUG | #6 3.813 npm http fetch GET 200 https://registry.npmjs.org/terser 74ms (cache miss)
+23:11:38 | DEBUG | #6 3.915 npm http fetch GET 200 https://registry.npmjs.org/esbuild 80ms (cache miss)
+23:11:39 | DEBUG | #6 4.127 npm http fetch GET 200 https://registry.npmjs.org/date-fns 192ms (cache miss)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack Error: could not resolve
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at PlaceDep.failPeerConflict (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:503:25)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at new PlaceDep (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:157:21)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at #buildDepStep (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:920:18)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async Arborist.buildIdealTree (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:181:7)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async Promise.all (index 1)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:131:5)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async Npm.exec (/usr/lib/node_modules/npm/lib/npm.js:207:9)
+23:11:39 | DEBUG | #6 4.207 npm verbose stack     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5)
+23:11:39 | DEBUG | #6 4.207 npm error code ERESOLVE
+23:11:39 | DEBUG | #6 4.207 npm error ERESOLVE could not resolve
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error While resolving: react-day-picker@8.10.1
+23:11:39 | DEBUG | #6 4.207 npm error Found: date-fns@4.1.0
+23:11:39 | DEBUG | #6 4.207 npm error node_modules/date-fns
+23:11:39 | DEBUG | #6 4.207 npm error   date-fns@"^4.1.0" from the root project
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error Could not resolve dependency:
+23:11:39 | DEBUG | #6 4.207 npm error peer date-fns@"^2.28.0 || ^3.0.0" from react-day-picker@8.10.1
+23:11:39 | DEBUG | #6 4.207 npm error node_modules/react-day-picker
+23:11:39 | DEBUG | #6 4.207 npm error   react-day-picker@"^8.10.1" from the root project
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error Conflicting peer dependency: date-fns@3.6.0
+23:11:39 | DEBUG | #6 4.207 npm error node_modules/date-fns
+23:11:39 | DEBUG | #6 4.207 npm error   peer date-fns@"^2.28.0 || ^3.0.0" from react-day-picker@8.10.1
+23:11:39 | DEBUG | #6 4.207 npm error   node_modules/react-day-picker
+23:11:39 | DEBUG | #6 4.207 npm error     react-day-picker@"^8.10.1" from the root project
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error Fix the upstream dependency conflict, or retry
+23:11:39 | DEBUG | #6 4.207 npm error this command with --force or --legacy-peer-deps
+23:11:39 | DEBUG | #6 4.207 npm error to accept an incorrect (and potentially broken) dependency resolution.
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error
+23:11:39 | DEBUG | #6 4.207 npm error For a full report see:
+23:11:39 | DEBUG | #6 4.207 npm error /root/.npm/_logs/2025-09-01T20_11_35_382Z-eresolve-report.txt
+23:11:39 | DEBUG | #6 4.209 npm verbose cwd /opt/build
+23:11:39 | DEBUG | #6 4.209 npm verbose os Linux 5.15.0-91-generic
+23:11:39 | DEBUG | #6 4.209 npm verbose node v22.19.0
+23:11:39 | DEBUG | #6 4.209 npm verbose npm  v10.9.3
+23:11:39 | DEBUG | #6 4.209 npm verbose exit 1
+23:11:39 | DEBUG | #6 4.209 npm verbose code 1
+23:11:39 | DEBUG | #6 4.209 npm error A complete log of this run can be found in: /root/.npm/_logs/2025-09-01T20_11_35_382Z-debug-0.log
